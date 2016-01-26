@@ -6,7 +6,7 @@ La funzionalità è stata realizzata utilizzando le API java standard (**JDK7**)
 
  - **apache commons-cli**: utilizzata per la creazione dell'interfaccia;
 
-Il software è disponibile sottoforma di `executable-jar`assemblato con [**Maven**][]. Per le istruzioni di utilizzo vedi [qui](#build) 
+Il software è disponibile sottoforma di `executable-jar`assemblato con [Maven][]. Per le istruzioni di utilizzo vedi [qui](#build) 
 
 ## Implementation
 
@@ -18,7 +18,7 @@ Di seguito un diagramma UML delle classi:
 
 ## Build
 
-Per eseguire l'applicazione eseguire il seguente comando
+Per eseguire l'applicazione eseguire il seguenti comandi
 
 ```
 $ mvn clean package
