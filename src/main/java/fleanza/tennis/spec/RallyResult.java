@@ -5,8 +5,8 @@ package fleanza.tennis.spec;
  */
 public class RallyResult {
 
-	private Player	winner;
-	private Player	loser;
+	private Player winner;
+	private Player loser;
 
 	public RallyResult(Player aWinner, Player aLoser) {
 

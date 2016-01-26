@@ -5,9 +5,5 @@ package fleanza.tennis.spec;
  */
 public interface Player {
 
-	public String name();
-
-	public Pointboard pointboard();
-
-	public Scoreboard scoreboard();
+	public String getName();
 }

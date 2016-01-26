@@ -1,14 +1,10 @@
 package fleanza.tennis.impl;
 
 import fleanza.tennis.spec.Player;
-import fleanza.tennis.spec.Pointboard;
-import fleanza.tennis.spec.Scoreboard;
 
 public class Single implements Player {
 
-	private String			name;
-	private Pointboard	pointboard;
-	private Scoreboard	scoreboard;
+	private String name;
 
 	public Single(String aName) {
 
@@ -21,22 +17,51 @@ public class Single implements Player {
 		}
 
 		name = aName;
-		pointboard = new Pointboard();
-		scoreboard = new Scoreboard();
 	}
 
 	@Override
-	public String name() {
+	public String getName() {
 		return name;
 	}
 
 	@Override
-	public Pointboard pointboard() {
-		return pointboard;
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
 	}
 
 	@Override
-	public Scoreboard scoreboard() {
-		return scoreboard;
+	public boolean equals(Object obj) {
+
+		if(this == obj) {
+			return true;
+		}
+
+		if(obj == null) {
+			return false;
+		}
+
+		if(getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Single other = (Single)obj;
+		if(name == null) {
+			if(other.name != null) {
+				return false;
+			}
+		}
+		else if(!name.equals(other.name)) {
+			return false;
+		}
+
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Single[%s]",getName());
 	}
 }

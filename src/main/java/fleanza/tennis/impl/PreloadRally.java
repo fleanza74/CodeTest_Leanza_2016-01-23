@@ -33,15 +33,10 @@ public class PreloadRally implements Rally {
 		}
 
 		String val = fifo.poll();
-		if(val.equals("1")) {
-			player1.pointboard().improve();
-			player2.pointboard().keep();
-			return RallyResult.create(player1,player2);
+		if(!val.equals("1") && !val.equals("2")) {
+			throw new IllegalArgumentException("Illegal value [" + val + "] on preloaded list. Valid value are: 1 or 2.");
 		}
-		else {
-			player1.pointboard().keep();
-			player2.pointboard().improve();
-			return RallyResult.create(player2,player1);
-		}
+
+		return val.equals("1") ? RallyResult.create(player1,player2) : RallyResult.create(player2,player1);
 	}
 }
