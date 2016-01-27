@@ -1,6 +1,7 @@
 package fleanza.tennis.client;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
@@ -63,6 +64,12 @@ public class TennisClient {
 	}
 
 	public void run(String[] args) throws ParseException, IOException {
+
+		InputStream is = getClass().getResourceAsStream("/banner.txt");
+		String banner = BannerUtils.copyToString(is);
+		System.out.println();
+		System.out.println(AnsiOutput.toString(AnsiElement.GREEN,banner));
+		System.out.println();
 
 		for(String arg : args) {
 			if(arg.equals("-h")) {

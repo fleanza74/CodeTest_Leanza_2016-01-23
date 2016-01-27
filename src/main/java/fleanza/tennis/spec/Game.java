@@ -1,5 +1,8 @@
 package fleanza.tennis.spec;
 
+import fleanza.tennis.client.AnsiElement;
+import fleanza.tennis.client.AnsiOutput;
+
 public class Game {
 
 	private Player player1;
@@ -51,7 +54,8 @@ public class Game {
 		while(!existWinner);
 
 		System.out.format("%33s%n%n","---------------------------------");
-		System.out.format("*** %5s WIN!!! ***%n%n",result.winner().getName());
+		System.out.println(AnsiOutput.toString(AnsiElement.GREEN,String.format("*** %5s WIN!!! ***%n%n",result.winner().getName())));
+		//System.out.format("*** %5s WIN!!! ***%n%n",result.winner().getName());
 		System.out.format("End Game%n%n");
 	}
 
