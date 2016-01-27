@@ -25,16 +25,16 @@ $ mvn clean package
 $ cd target && java -jar *-with-dependencies.jar
 ```
 
+```
+usage: java -jar tennis-jar-with-dependencies.jar [-h] -p1 <player1> -p2 <player2> [-s <strategy>]
+Tennis Game
 
-> usage: java -jar tennis-jar-with-dependencies.jar [-h] -p1 <player1> -p2 <player2> [-s <strategy>]
-> Tennis Game
-> 
-> -h              Print this help
-> -p1 <player1>   The player 1 name
-> -p2 <player2>   The player 1 name
-> -s <strategy>   Game strategy.
->                 Valid value are: R=Random, P=Preload (Default: Random)
-
+-h              Print this help
+-p1 <player1>   The player 1 name
+-p2 <player2>   The player 1 name
+-s <strategy>   Game strategy.
+                Valid value are: R=Random, P=Preload (Default: Random)
+```
 
 [Maven]: http://maven.apache.org/
 
